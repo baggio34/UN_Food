@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url(../IMG/fundoCarrossel.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    background-color: #ffffff; /* Fundo preto atrás das divs */
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-itens {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 1 0 25%; /* 4 divs ocupam 100% do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-itens2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item2 {
+    flex: 1 0 25%; /* 4 divs ocupam 100% do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-placeholder {
+    background-color: rgb(95, 95, 95);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+button {
+    background-color: #8b8b8b53;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50PX;
+    padding:0.7rem 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button:hover {
+    background-color: #555;
+    color: #ffffff;
+}
+
+button.prev {
+    left: 8px;
+}
+
+button.next {
+    right: 8px; /* Mantém o botão dentro do fundo preto */
+}
+.logo-image {
+    width: 200px;  /* Defina a largura fixa desejada */
+    height: 150px; /* Defina a altura fixa desejada */
+    object-fit: cover; /* Para manter a proporção da imagem e cortá-la se necessário */
+    border-radius: 20px; /* Para combinar com o estilo do placeholder */
+}

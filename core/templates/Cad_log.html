@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro</title>
+	<link rel="icon" href="../static/IMG/Tomate.ico">
+	<link rel="stylesheet" type="text/css" href="../static/CSS/Cad_log.css">
+
+</head>
+<body>
+	<div class="fundo">
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+
+</head></div>
+
+<body>
+	<div class="fundo"></div>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="{% url 'Cad_log' %}" method="POST" autocomplete="off" class="form" enctype="multipart/form-data">
+			{% csrf_token %}
+
+
+			<h1>Criar conta</h1>
+			<input name="nome" id="nome" type="text" placeholder="Nome" />
+			<input name="email" id="email" type="email" placeholder="Email" />
+			<input name="password" id="senha" type="password" placeholder="Senha" />
+			<button id="cadastrar">Cadastrar</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="{% url 'login_usuario' %}" method="POST" autocomplete="off" class="form" enctype="multipart/form-data">
+			{% csrf_token %}
+
+
+			<h1>Login</h1>
+			<input name="emailLog" id="emailLog" type="email" placeholder="Email" />
+			<input name="senhaLog" id="senhaLog" type="password" placeholder="Senha" />
+			<a href="Email_redefiniçao.html" onclick="recoverPassword" class="esqueceu_senha">Esqueceu sua senha?</a>
+			<button id="botLog">Logar</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<img src="../static/IMG/Logo-cad.svg" alt="" class="logo">
+				<h1>Bem vindo de volta!</h1>
+				<p>Para continuar conectado conosco, faça login com suas informações pessoais</p>
+				<button class="ghost" id="signIn">Fazer Login</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<img src="../static/IMG/Logo-cad.svg" alt="" class="logo">
+				<h1>Olá, amigo!</h1>
+				<p>Insira seus dados pessoais e comece sua jornada conosco</p>
+				<div class="botoes">
+					<button class="ghost" id="criar">Criar conta</button>
+					<a href="{% url 'Cad_mercado' %}" class="mudar_login">Logar como Mercado</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+<script src="../static/js/script.js"></script>
+</html>
+
+

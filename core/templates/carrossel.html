@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel</title>
+    <link rel="stylesheet" href="../static/CSS/carrossel.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <button class="prev" onclick="movePrev()">&#10094;</button>
+        <div class="carousel">
+            <div class="carousel-itens">
+                {% for mercado in mercados %}
+                <div class="carousel-item">
+                    <a href="{% url 'contato_mercado' mercado.email_Mercado %}">
+                        <img src="{{ mercado.imagem.url }}" alt="{{ mercado.nome }}" class="logo-image">
+                    </a>
+                </div>
+                {% empty %}
+                    <div class="carousel-item">
+                        <div class="logo-placeholder">Nenhum mercado cadastrado.</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <button class="next" onclick="moveNext()">&#10095;</button>
+    </div>
+
+    <div class="carousel-container">
+        <button class="prev" onclick="movePrev2()">&#10094;</button>
+        <div class="carousel">
+            <div class="carousel-itens2">
+                {% for mercado in mercados %}
+                <div class="carousel-item2">
+                    <a href="{% url 'contato_mercado' mercado.email_Mercado %}">
+                        <img src="{{ mercado.imagem.url }}" alt="{{ mercado.nome }}" class="logo-image">
+                    </a>
+                </div>
+                {% empty %}
+                    <div class="carousel-item">
+                        <div class="logo-placeholder">Nenhum mercado cadastrado.</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <button class="next" onclick="moveNext2()">&#10095;</button>
+    </div>
+
+    <script src="../static/js/carrossel.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    --cor-primaria: red;
+    --branco: white;
+    --verde: green;
+    font-family: "Open Sans", sans-serif;
+    --gap-header: 3rem;
+    --padding-geral:0.7rem 2rem;
+    --padding-botao:0.3rem 0.9rem;
+    --gap-info: 15rem;
+    --padding-main:8rem 9rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-geral);
+    
+}
+#add_cesta{
+    display: none;
+}
+.logo{
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../IMG/Logo.svg);
+    background-size: cover;
+    
+}
+.opc{
+   width: 65%; 
+}
+.opc span{
+    
+    gap: var(--gap-header);
+    display: flex;
+   
+    
+}
+.opc span a{
+    color: var(--cor-primaria);
+}
+.botoes{
+    width: 23%;
+    display: flex;
+    gap: var(--gap-header);
+}
+.config-botao{
+    border-radius: 25px;
+    padding: var(--padding-botao);
+    color: var(--branco);
+    background-color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+.config-botao:hover{
+    transition: 0.4s;
+    color:var(--cor-primaria);
+    background-color: var(--branco);
+    border: 2px solid var(--cor-primaria);
+}
+.sec_home{
+    overflow: hidden;
+    position: relative;
+    height: 89vh;
+    background-image: url(../IMG/Fundo-home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo_home{
+    position: absolute;
+    top: 3rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url(../IMG/Logo.svg);
+    background-size: cover;
+    height: 25rem;
+    width: 25rem;
+}
+.folhas{
+    pointer-events: none;
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 100.2%;
+}
+.grama{
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.folha{
+    width: 50%;
+    position: relative;
+    transition: 1s;
+}
+.logo_home:hover ~ .folhas .folha {
+    transition: 1s;
+  transform: translateX(30%);
+}
+
+.logo_home:hover ~ .folhas .folha:first-child {
+    transition: 1s;
+  transform: translateX(-30%);
+}
+.sec_info1{
+    overflow: hidden;
+}
+.top_sec{
+    width: 100%;
+}
+.info_sec{
+    color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-info);
+    padding: var(--padding-main);
+    text-align: right;
+}
+.info_sec2{
+    color: var(--verde);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-info);
+    padding: var(--padding-main);
+    text-align: left;
+}

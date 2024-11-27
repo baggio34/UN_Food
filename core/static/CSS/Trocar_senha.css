@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,800&display=swap');
+
+* {
+	box-sizing: border-box;
+	--cor-primaria: red;
+    --branco: white;
+    --verde: green;
+	font-family: "Open Sans", sans-serif;
+}
+
+body {
+	background-image: url(../IMG/Fundo-home.png);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 95vh;
+	margin: -20px 0 50px;
+}
+input {
+	color: #707070;
+	background-color: #e2e2e2;
+	border: none;
+	padding: 12px 15px;
+	width: 100%;
+	box-shadow:0px 4px 20px 5px rgba(0, 0, 0, 0.219);
+}
+
+.container {
+    background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 70vh ;
+    width: 65vh;
+	text-align: center;
+	gap: 2rem;
+    border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+	0 10px 10px rgba(0,0,0,0.22);
+}
+button {
+	border-radius: 20px;
+	border: 1px solid var(--cor-primaria);
+	background-color: var(--cor-primaria);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+    
+}
+button:active {
+	transform: scale(0.95);
+}

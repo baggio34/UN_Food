@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/IMG/Tomate.ico">
+    <link rel="stylesheet" href="../static/CSS/Cad_cesta.css">
+    <title>Cadastro de cesta</title>
+</head>
+<body>
+
+    
+    <form action="{% url 'Cad_cesta' %}" autocomplete="off" class="container" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Cadastro Cesta</h1>
+        <label class="picture" for="picture__input" tabIndex="0">
+            <span class="picture__image"></span>
+          </label>
+
+          <input type="file" name="imagem" id="picture__input" required>
+          <input class="input" name="nome" id="name_cesta" type="text" placeholder="Nome da cesta" required />
+          <input class="input" name="preco" id="preço" type="number" placeholder="Preço" min="0" step="0.01" required />
+          <input class="input" name="tamanho" id="tamanho" type="number" placeholder="Tamanho da cesta/kg" required />  
+          <input class="input" name="descricao" id="descrição" type="text" placeholder="Descrição" required />
+          <div id="botoes">
+            <button type="submit" name="action" value="cadastrar">Cadastrar</button>
+            <button type="submit" name="action" value="editar">Editar</button>
+            <button type="submit" name="action" value="deletar">Deletar</button>
+        </div>
+
+
+    </form>
+
+
+</div>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+</body>
+<script src="../static/js/cesta.js"></script>
+</html>

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro</title>
+	<link rel="icon" href="../static/IMG/Tomate.ico">
+	<link rel="stylesheet" type="text/css" href="../static/CSS/Cad_mercado.css">
+
+</head>
+<body>
+	<div class="fundo">
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+
+</head></div>
+
+<body>
+	<div class="fundo"></div>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="{% url 'Cad_mercado' %}" method="POST" autocomplete="off" class="form" enctype="multipart/form-data">
+			{% csrf_token %}
+
+			<h1>Cadastrar Mercado</h1>
+			<label class="picture" for="picture__input" tabIndex="0">
+				<span class="picture__image"></span>
+			  </label>
+			  
+			<input type="file" name="imagem" id="picture__input">
+			<input class="input" id="email_Mercado" name="email_Mercado" type="email" placeholder="Seu email" />
+			<input class="input" id="nome" name="nome" type="text" placeholder="Nome do mercado" />
+			<input class="input" id="endereco" name="endereco" type="text" placeholder="Seu endereço" />
+			<input class="input" id="telefone" name="telefone" type="number" placeholder="Número do estabelecimento" />
+			<input class="input" id="link_whatsapp" name="link_whatsapp" type="url" placeholder="Link do contato WhatsApp" />
+			<input class="input" id="password" name="password" type="password" placeholder="Sua senha" />
+			<button id="cadastrar">Cadastrar</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="{% url 'login_Mercado' %}" method="POST" autocomplete="off" class="form" enctype="multipart/form-data">
+			{% csrf_token %}
+			<h1>Login</h1>
+			<input name="emailLog" id="emailLog" type="email" placeholder="Email" required />
+			<input name="passwordLog" id="passwordLog" type="password" placeholder="Senha" required />
+			<a href="Email_redefiniçao.html" class="esqueceu_senha">Esqueceu sua senha?</a>
+			<button id="botLog">Logar</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<img src="../static/IMG/Logo-cad.svg" alt="" class="logo">
+				<h1>Bem vindo de volta!</h1>
+				<p>Para continuar conectado conosco, faça login com suas informações pessoais</p>
+				<button class="ghost" id="signIn">Fazer Login</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<img src="../static/IMG/Logo-cad.svg" alt="" class="logo">
+				<h1>Olá, amigo!</h1>
+				<p>Insira seus dados pessoais e comece sua jornada conosco</p>
+				<div class="botoes">
+					<button class="ghost" id="criar">Criar conta</button>
+					<a href="{% url 'Cad_log' %}" class="mudar_login">Logar como usuario</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+<script src="../static/js/script.js"></script>
+</html>
+
+

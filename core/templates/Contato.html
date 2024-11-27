@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/Contato.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Aqui você pode adicionar o logo do mercado ou do site -->
+        </div>
+        <div class="opc">
+            <span>
+                <a href="#">
+                    <h2>COMPRAR</h2>
+                </a>
+                <a href="#">
+                    <h2>MAPA</h2>
+                </a>
+            </span>
+        </div>
+    </header>
+    <main>
+        <section class="cestas">
+            {% for cesta in cestas %}
+                <div class="cesta-geral">
+                    <a href="" class="link1">
+                        <div class="box_cesta">
+                            <img src="{{ cesta.imagem.url }}" alt="{{ cesta.nome }}" style="width: 100%; height: auto;" />
+                        </div>
+                    </a>
+                    <h2 class="preco">R$ {{ cesta.preco }}</h2>
+                    <p class="descricao">{{ cesta.descricao }}</p>
+                </div>
+            {% empty %}
+                <div class="cesta-geral">
+                    <p>Nenhuma cesta disponível.</p>
+                </div>
+            {% endfor %}
+        </section>
+        <section class="social_icon">
+            <ul class="lista__icones">
+                <li class="icone__elemento__geral">
+                    <a href="{{ mercado.link_whatsapp }}" target="_blank" class="elemento__interno__redirect">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
