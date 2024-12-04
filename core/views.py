@@ -16,6 +16,9 @@ from django.shortcuts import render, get_object_or_404
 #rendenizar as telas
 #
 
+def Trocar_senha(request):
+    return render(request, 'Trocar_senha.html')
+
 def cadastroMercado(request):
     return render(request, 'cadastroMercado.html')
 
@@ -27,6 +30,7 @@ def Email_redefiniçao(request):
 
 def Home(request):
     return render(request, 'Home.html')
+
 
 def Trocar_senha(request):
     return render(request, 'Trocar_senha.html')
