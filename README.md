@@ -1,0 +1,1 @@
+Projeto Integrador do curso Técnico em Informática no IFSC Câmpus Xânxere, desenvolvido utilizando HTML e CSS como linguagens de estruturação e estilização, no front-end foi utilizado a linguagem JavaScript, e para o back-end a linguagem Python, como framework foi utilizado Django e MySQL como SGBD.
